@@ -90,6 +90,10 @@ Cache::config('default', array('engine' => 'File'));
  *
  * ));
  */
+
+// 環境設定ファイルの読み込み
+Configure::load('env');
+
 Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
 	'CacheDispatcher'
