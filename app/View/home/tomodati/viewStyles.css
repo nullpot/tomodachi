@@ -1,11 +1,14 @@
 .fa-facebook-square{
 	color:#415E9B;
+	font-size: 140%;
 }
 .fa-twitter-square{
 	color:#1DA1F2;
+	font-size: 140%;
 }
 .icon-line-square{
 	color:#1DCD00;
+	font-size: 120%;
 }
 
 .text-right{
@@ -14,4 +17,7 @@
 
 .ul{
 	list-style:none;
+}
+li{
+	list-style: none;
 }
