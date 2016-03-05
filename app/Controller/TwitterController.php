@@ -3,8 +3,6 @@
 
 App::uses('AppController', 'Controller');
 App::uses('ComponentCollection', 'Controller');
-App::import('Vendor', 'twitteroauth/autoload');
-use Abraham\TwitterOAuth\TwitterOAuth;
 
 class TwitterController extends AppController
 {
@@ -24,19 +22,24 @@ class TwitterController extends AppController
 	{
 		$this->autoRender = false;
 		$this->autoLayout = false;
+		require_once(APP.'/Vendor/twitter/twitteroauth.php');
 
-		$twitter = new TwitterOAuth(
+		$TwitterOAuth = new TwitterOAuth(
 			Configure::read('api.twitter.consumer_key'),
-			Configure::read('api.twitter.consumer_key_secret')
+			Configure::read('api.twitter.consumer_key_secret'),
+			Configure::read('api.twitter.access_token'),
+			Configure::read('api.twitter.access_token_secret')
 		);
-		$request_token = $twitter->oauth(
-			'oauth/request_token',
-			array(
-				'oauth_callback' => 'http://tomodachi.nullpot.com/twitter/callback'
-			)
-		);
-		$url = $twitter->url('oauth/authorize', array('oauth_token' => $request_token['oauth_token']));
-		$this->redirect($url);
+
+		$TwitterOAuth->host = 'https://api.twitter.com/1.1/';
+
+		// get follower
+		$followers = $TwitterOAuth->get('followers/list');
+		foreach ($followers->users as $user) {
+			$user_id = $user->id_str;
+			$user_name = $user->name;
+			debug($user_id . ' : ' . $user_name);
+		}
 
 	}
 
