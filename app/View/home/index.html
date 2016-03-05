@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../dist/css/starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top navbar-dark bg-inverse ">
+      <a class="navbar-brand" href="#">Project name</a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        
+        <li class="dropdown text-xs-right" id="menuLogin">
+          <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown" id="navLogin">aLogin</a>
+          <div class="dropdown-menu pull-right" style="padding:17px;">
+          <form id="formLogin " class="form"> 
+            <label>Login</label> 
+            <input name="_csrf" id="token" type="hidden" value="YzweNDvp-oS0LD2QZIvoaamcKR5WtTK6y__Y">
+            <input name="username" id="username" type="text" placeholder="Username" pattern="^[a-z,A-Z,0-9,_]{6,15}$" data-valid-min="6" title="Enter your username" required="">
+            <input name="password" id="password" type="password" placeholder="Password" title="Enter your password" required=""><br>
+            <button type="button" id="btnLogin" class="btn">Login</button>
+          </form>
+          <form>
+            <a href="#" title="Fast and free sign up!" id="btnNewUser" data-toggle="collapse" data-target="#formRegister">New User? Sign-up..</a>
+          </form>
+          <form id="formRegister" class="form collapse">
+            <input name="_csrf" id="token" type="hidden" value="YzweNDvp-oS0LD2QZIvoaamcKR5WtTK6y__Y">
+            <input name="email" id="inputEmail" type="email" placeholder="Email" required="">
+            <input name="username" id="inputUsername" type="text" placeholder="Username" pattern="^[a-z,A-Z,0-9,_]{6,15}$" data-valid-min="6" title="Choose a username" required=""><br>
+            <input name="password" id="inputpassword" type="password" placeholder="Password" required=""> 
+            <input name="verify" id="inputVerify" type="password" placeholder="Password (again)" required=""><br>                                  
+            <button type="button" id="btnRegister" class="btn">Sign Up</button>
+          </form>
+          <a data-toggle="modal" role="button" href="#forgotPasswordModal">Forgot username or password?</a>
+          <a data-toggle="modal" role="button" href="#contactModal"><small>Need help? Contact us</small></a>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>ともだち</h1>
+        <p class="lead">最近連絡がないあの人、連絡すればよかったんだっけ・・・・<br>そんな悩みを解決するのが”ともだち”</p>
+      </div>
+
+      <div class="starter-template">
+        <a href="./view.html">
+          <button type="button" class="btn btn-primary">いますぐ使ってみる</button>
+        </a>
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
