@@ -18,11 +18,11 @@
     <link href="../dist/css/starter-template.css" rel="stylesheet">
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../dist/css/icomoon/style.css">
+  <link rel="stylesheet" href="icomoon/style.css">
   <link rel="stylesheet" href="viewStyles.css">
   </head>
 
-  <body>
+<body>
 
     <nav class="navbar navbar-fixed-top navbar-dark bg-inverse ">
       <a class="navbar-brand" href="index.html">ともだち</a>
@@ -30,63 +30,34 @@
         <li class="nav-item active">
           <a class="nav-link" href="view.html">検索する <span class="sr-only">(current)</span></a>
         </li>
-<!--         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="about.html">概要</a>
         </li>
       </ul>
     </nav>
-
     <!-- <div class="container"> -->
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+          </span>
+        </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+<hr class="featurette-divider">
+    
+<!-- 友達一覧のテンプレート -->
 
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <p>どの友達　</p>
-        </div>  
-      </div>        
-    </div>
-    <hr class="featurette-divider">
-<!-- 友達一覧のテンプレートここまで -->
-
-     <!--  <div  class="container">
-        <table class="table">
-        <thead>
-          <tr>
-            <th>名前</th>
-            <th>連絡手段・コメント</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td rowspan="2">Friend</td>
-            <td>
-              <span class="fa fa-facebook-square"></span>
-              <span class="fa fa-twitter-square"></span>
-              <span class="icon-line-square"></span>
-            </td>
-            <tr>
-              <td>はじめてのハッカソンにて</td>
-            </tr>
-
-          </tr>
-       
-        </tbody>
-      </table>
-      </div> -->
-
-<!--       <span class="fa fa-facebook-square"></span>
-      <span class="fa fa-twitter-square"></span>
-      <span class="icon-line-square"></span> -->
+          <p>友達ごとにTwitterやLineのアカウントといった連絡方法を表示します。また、友達ごとにメモ用コメントをつけることも可能です。
+        </div>
       </div>
-
-
-    <!-- </div>/.container -->
-
-
+    </div>
+<!-- 友達一覧のテンプレートここまで -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
